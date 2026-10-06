@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <hr>
+    <img src="" alt="">
+    <script>
+        //entradas
+        var nome = prompt("Digite o seu nome")
+        document.write("Olá <strong>" ,nome, "</strong><br>")
+        var pesotexto = prompt("Digite o peso")
+        var alturatexto = prompt("Digite a altura")
+        //processamento
+        var peso = parseFloat(pesotexto)
+        var altura = parseFloat(alturatexto)
+        var IMC = peso / (altura*altura)
+        document.write("peso: ",peso, "<br>")
+        document.write("altura:",altura, "<br>")
+        document.write("IMC:",IMC,"<br>")
+        if (IMC <= 18.5){
+            document.write("Voce está desnutrido<br>")
+            document.write('<img src="desnutrido.jpg" width="120" height="120" alt="Pessoa desnutrido">')
+        } else if (IMC <= 24.9){
+            document.write("Voce esta com peso normal<br>")
+            document.write('<img src="pesonormal.jpg" width="120" height="120" alt="pessoa com peso normal">')
+        }  else if (IMC <= 29.9){
+            document.write("Voce está com sobrepeso pré-obsersidade<br>")
+            document.write('<img src="sobrepeso.jpg" width="120" height="120" alt="pessoa sobrepeso">')
+        } else {
+            document.write("Cuidado, Voce está obeso<br>")
+            document.write('')
+        }
+    </script>
+</body>
+</html>
